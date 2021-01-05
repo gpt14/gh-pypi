@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="gh-pypi-gpt14",  # Replace with your own username
-    version=os.getenv('VERSION', '0.0.1'),
+    version=os.environ.get('VERSION', '0.1.0'),
     author="Gandhar",
     author_email="author@example.com",
     description="A small example package",
