@@ -26,10 +26,10 @@ jobs:
     - name: Package
       env:
         VERSION: ${{ github.event.release.tag_name }}
-        TWINE_USERNAME: __token_
+        TWINE_USERNAME: __token__
         TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
       run: |
         python setup.py sdist
-        twine upload dist/*
+        twine upload dist/* --verbose
 
 
