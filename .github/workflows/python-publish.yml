@@ -25,6 +25,8 @@ jobs:
         pip install setuptools wheel twine
     - uses: olegtarasov/get-tag@v2.1
       id: tagName
+      with:
+        tagRegex: "v(.*)"
     - name: Package
       env:
         PACKAGE_VERSION: ${{ steps.tagName.outputs.tag }}
